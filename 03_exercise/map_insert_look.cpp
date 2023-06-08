@@ -22,6 +22,21 @@ int main()
         cout << iter->first << "\t" << iter->second << endl;
     }
 
+    const char key1[20] = "addr";
+    for (iter = mp.begin(); iter != mp.end(); iter++){
+        if (strcmp(key1, iter->first) == 0) {
+            cout << iter->first << " : " << iter->second << endl;
+            
+        }
+    }
+
+    iter = mp.find("img");
+    mp.erase(iter);
+
+    for (iter = mp.begin(); iter != mp.end(); iter++) {
+        cout << iter->first << "\t" << iter->second << endl;
+    }
+
     //return 0;
 }
 
